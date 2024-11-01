@@ -1,0 +1,556 @@
+body{
+    background-color:var(--bg-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html,
+body{
+    scroll-padding-top:6.25rem;
+}
+:root{
+    --main-color:#FFFFFF;
+    --second-color: #0D6EFD;
+    --second-color-rgba: rgb(0, 120, 255);  
+    --second-bg:#CDE1F8;
+    --bg-color:#F5F5F5;
+    --color-hover:#3393ff;
+    --color-foucs:#86b7fe;
+    --bg-footer:#0062D3;
+}
+
+.navbar{
+    background-color:rgba(0, 0, 0, 0.9);
+}
+.navbar-brand{
+    --bs-navbar-brand-color:var(--main-color);
+    font-size: 28px;
+    font-weight: 600;
+    --bs-navbar-brand-hover-color :var(--main-color);
+}
+.navbar-brand:hover{
+    color:var(--bs-navbar-brand-color);
+}
+
+ul li .nav-link{
+    --bs-nav-pills-link-active-bg: transparent;
+    --bs-nav-pills-link-active-color:var(--main-color);
+    --bs-nav-pills-link-active-color: var(--main-color);
+    --bs-nav-link-color:var(--main-color);
+    --bs-nav-link-hover-color:var(--main-color);
+}
+.navbar-toggler{
+    --bs-navbar-color:var(--main-color);
+
+}
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -0.5rem;
+    margin-left: 0.1rem;
+    display: none; 
+}
+.dropdown-submenu:hover > .dropdown-menu{
+    display: block; 
+}
+.dropdown-menu a{
+    transition: all .5 ease;
+    --bs-dropdown-link-active-bg:var(--main-color);
+}
+.dropdown-menu a:hover{
+    color: var(--second-color);
+}
+.nav-item a{
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+}
+.nav-item a::before{
+    content: "";
+    display: block;
+    height: 0rem;
+    width: 0rem;
+    position: absolute;
+    bottom: -10px;
+    background-color : var(--main-color);
+    transition: all 0.5s ease;
+}
+.nav-item a:hover::before{
+    height: 0.1875rem;
+    width:3.625rem;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: var(--main-color);
+    background-color: transparent;
+}
+.nav-pills .nav-link.active{
+    position: relative;
+}
+.nav-pills .nav-link.active::before{
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: var(--main-color);
+    height: 0.1875rem;
+    width: 3.625rem;
+    bottom: -10px;
+}
+
+/*--------------- hero-section--------------- */
+section.hero_section{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/hero-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    }
+.hero_section h1{
+    margin-bottom: 1rem;
+    color:var(--main-color);
+    font-size: 4.5rem;
+}
+.hero_section p{
+    color: var(--main-color);
+    font-size: 40px;
+    width: fit-content;
+}
+.hero_section p::after{
+    content: "";
+    color: var(--main-color);
+    animation-name:typing ;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    border-right: .25rem solid var(--main-color);
+}
+
+@keyframes typing{
+    0%{
+        content:"|";}
+    1.2987012987013%{
+        content:"De";
+    }
+    2.5974025974026%{
+        content:"Dev";
+    }
+    3.8961038961039%{
+        content:"Deve";
+    }
+    5.19480519480519%{
+        content:"Devel";
+    }
+    6.49350649350649%{
+        content:"Develo";
+    }
+    7.79220779220779%{
+        content:"Develop";
+    }
+    9.09090909090909%{
+        content:"Develope";
+    }
+    10.3896103896104%{
+        content:"Developer";
+    }
+    11.6883116883117%{
+        content:"Developer";
+    }
+    12.987012987013%{
+        content:"Develope";
+    }
+    14.2857142857143%{
+        content:"Develop";
+    }
+    15.5844155844156%{
+        content:"Develo";
+    }
+    16.8831168831169%{
+        content:"Devel";
+    }
+    18.1818181818182%{
+        content:"Deve";
+    }
+    19.4805194805195%{
+        content:"Dev";
+    }
+    20.7792207792208%{
+        content:"De";
+    }
+    22.0779220779221%{content:"D";}
+    23.3766233766234%{content:"D";}
+    24.6753246753247%{content:"De";}
+    25.974025974026%{content:"Des";}
+    27.2727272727273%{content:"Desi";}
+    28.5714285714286%{content:"Desig";}
+    29.8701298701299%{content:"Design";}
+    31.1688311688312%{content:"Designe";}
+    32.4675324675325%{content:"Designer";}
+    33.7662337662338%{content:"Designer";}
+    35.0649350649351%{content:"Designe";}
+    36.3636363636364%{content:"Design";}
+    37.6623376623377%{content:"Desig";}
+    38.961038961039%{content:"Desi";}
+    40.2597402597403%{content:"Des";}
+    41.5584415584416%{content:"De";}
+    42.8571428571428%{content:"D";}
+    44.1558441558441%{content:"P";}
+    45.4545454545454%{content:"Ph";}
+    46.7532467532467%{content:"Pho";}
+    48.051948051948%{content:"Phot";}
+    49.3506493506493%{content:"Photo";}
+    50.6493506493506%{content:"Photog";}
+    51.9480519480519%{content:"Photogr";}
+    53.2467532467532%{content:"Photogra";}
+    54.5454545454545%{content:"Photograp";}
+    55.8441558441558%{content:"Photograph";}
+    57.1428571428571%{content:"Photographte";}
+    58.4415584415584%{content:"Photographter";}
+    59.7402597402597%{content:"Photographter";}
+    61.038961038961%{content:"Photographte";}
+    62.3376623376623%{content:"Photograph";}
+    63.6363636363636%{content:"Photograp";}
+    64.9350649350649%{content:"Photogra";}
+    66.2337662337662%{content:"Photogr";}
+    67.5324675324675%{content:"Photog";}
+    68.8311688311688%{content:"Photo";}
+    70.1298701298701%{content:"Phot";}
+    71.4285714285714%{content:"Pho";}
+    72.7272727272727%{content:"Ph";}
+    74.025974025974%{content:"P";}
+    75.3246753246753%{content:"F";}
+    76.6233766233766%{content:"Fr";}
+    77.9220779220779%{content:"Fre";}
+    79.2207792207792%{content:"Free";}
+    80.5194805194805%{content:"Freel";}
+    81.8181818181818%{content:"Freela";}
+    83.1168831168831%{content:"Freelan";}
+    84.4155844155844%{content:"Freelanc";}
+    85.7142857142857%{content:"Freelance";}
+    87.012987012987%{content:"Freelancer";}
+    88.3116883116883%{content:"Freelancer";}
+    89.6103896103896%{content:"Freelance";}
+    90.9090909090909%{content:"Freelanc";}
+    92.2077922077923%{content:"Freelan";}
+    93.5064935064936%{content:"Freela";}
+    94.8051948051949%{content:"Freel";}
+    96.1038961038962%{content:"Free";}
+    97.4025974025975%{content:"Fre";}
+    98.7012987012988%{content:"Fr";}
+    100%{content:"F";}
+}
+.progress{
+    background-color:var(--second-bg);
+}
+.card img{
+    width: 9.375rem;
+    height: 9.375rem;
+    object-fit: cover;
+}
+.title-s{
+    color: black;
+    font-weight: 600;
+    font-size: 1.1875rem;
+}
+.list-group-item{
+    color: rgb(78,78,78);
+    
+}
+
+.title_about{
+    position: relative;
+    width: fit-content;
+}
+
+.title_about::after{
+    content: "";
+    position: absolute;
+    background-color:var(--second-color);
+    height: .2188rem;
+    width: 75%;
+    top: 100%;
+    left: 0 ;
+    
+}
+
+
+.ico_circle {
+    height: 100px;
+    width: 100px;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    line-height: 1.55;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 0 0 10px var(--second-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.services_box:hover .ico_circle{
+    box-shadow: 0 0 0 10px #CDE1F8;
+    background-color:var(--second-color);
+}
+.content_services p{
+    color: #4e4e4e;
+
+}
+
+.services_box{
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+
+.counter{
+background-image:url('../images/post-3.jpg');
+position: relative;
+background-repeat: no-repeat;
+background-attachment:fixed;
+background-size: cover;
+background-position:center center;
+}
+
+.counter .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(1, 119, 253, 0.8); 
+        z-index: 1; 
+}
+.counter .row, .counter .container {
+    position: relative;
+    z-index: 2;
+}
+
+.counter_box{
+    padding: 8rem 0;
+}
+.counter_icon {
+    height: 65px;
+    width: 65px;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    line-height: 1.55;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 0 0 10px var(--second-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    color: var(--main-color);
+}
+.counter_num{
+    color: var(--main-color);
+}
+.line-mf{
+width: 40px;
+height: 5px;
+background-color:var(--second-color);
+margin: 0 auto;
+}
+.h1{
+    font-size: 3rem;
+
+}
+.icon_work{
+    font-size: 3rem;
+    color: var(--second-color);
+    width: fit-content;
+}
+.p_info{
+font-weight: 400;
+font-size:.8rem;
+}
+.img_work{
+    overflow: hidden;
+}
+.card_work img{
+transition: transform 1s ease;
+cursor: pointer;
+}
+.card_work img:hover{
+    transform: scale(1.3);
+}
+.card_work i{
+    cursor: pointer;
+}
+
+.slider .carousel-inner{
+    background-image: url(../images/overlay-bg.jpg);
+    height: 600px;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+}
+.carousel-inner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 119, 253, 0.8); 
+    z-index: 1; 
+}
+
+
+.carousel-item p{
+color:var(--main-color);
+width: 100%;
+margin: auto;
+}
+.body_blog a{
+    transition: all 0.5s ease;
+}
+.body_blog a:hover{
+    color: var(--second-color);
+}
+#Blog .card-footer a span{
+    transition: all .5s ease;
+}
+#Blog .card-footer a:hover span{
+        color: #0D6EFD;
+}
+.card-footer img{
+    width: 30px;
+    height: 30px;
+
+}
+.body_blog{
+    position: relative;
+}
+.card-category{
+    position: absolute;
+    top: -16px;
+    left: 15px;
+    right: 15px;
+}
+#Contact{
+    background-image: url(../images/overlay-bg.jpg);
+    position: relative;
+    background-attachment: fixed;
+    box-shadow:0 13px 8px -10px rgba(0, 0, 0, 0.1);
+
+    & .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 119, 253, 0.8); 
+    z-index: 1; 
+}
+}
+
+
+
+.title-contact{
+    position: relative;
+    width: fit-content;
+}
+
+.title-contact::after{
+    content: "";
+    position: absolute;
+    background-color: var(--second-color);
+    height: .1875rem;
+    width: 40%;
+    top: 100%;
+    left: 0 ;
+    
+}
+.form_contact button{
+    width: fit-content;
+    transition: all .5s ease;
+    background-color:var(--second-color);
+    color: var(--main-color);
+}
+.form_contact button:hover{
+    background: var(--color-hover);
+    color: var(--main-color);
+    box-shadow: 0 0 0 4px var(--second-bg);
+}
+
+.more_info ul{
+    list-style: none;
+}
+.more_info ul li i{
+    color: var(--second-color);
+}
+.social ul{
+    display: flex; 
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+}
+.social li{
+    margin-right: 20px;
+}
+
+.ico_social {
+    height: 45px;
+    width: 45px;
+    font-size: 1.25rem;
+    border-radius: 50%;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 0 0 4px var(--second-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.ico_social:hover{
+    box-shadow: 0 0 0 5px var(--second-bg);
+    background-color: var(--second-color);
+}
+footer{
+    background-color:var(--bg-footer);
+    color: var(--main-color);
+}
+footer a{
+    color: var(--main-color);
+    text-decoration:none;
+}
+
+.carousel-dark .carousel-indicators [data-bs-target] {
+    background-color: var(--main-color);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.carousel-indicators {
+    position: absolute;
+    bottom:100px ;
+}
+
+.carousel-inner {
+    position: relative;
+}
+
+
+.btn_scroll{
+    width: 40px;
+    height: 40px;
+    right: 15px; 
+    bottom: 15px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 55;
+    & i{
+        font-size: 1.25rem;
+        color: var(--main-color);
+    }
+}
+@media (min-width:992px){
+    .carousel-item p{
+        width: 55%;
+    }
+}
+
+
